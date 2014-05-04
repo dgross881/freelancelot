@@ -1,0 +1,19 @@
+class User < ActiveRecord::Base
+ 
+ #name 
+  validates :name, presence: true, length: { maximum: 50 }  
+ 
+ #email
+   before_save {|user| user.email = email.downcase} 
+   EMAIL_VALIDATOR = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+   validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: EMAIL_VALIDATOR } 
+ 
+ #password 
+   has_secure_password 
+   validates :password, length: { minimum: 6 }  
+   validates :password_confirmation, presence: true
+ 
+ #Gravatar paperclip  
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "frog.jpg"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+end
