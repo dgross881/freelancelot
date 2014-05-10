@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'mysql2', '~> 0.3.15'
 gem 'paperclip', '~> 4.1.1'
 gem 'bcrypt-ruby', '~> 3.1.5' 
+gem 'paperclip-dropbox', '~> 1.2.1'
+gem 'figaro', '~> 0.7.0'
 
 group :doc do
   gem 'sdoc', require: false
