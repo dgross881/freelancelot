@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
  
  #email
    before_save {|user| user.email = email.downcase} 
+   before_save :create_remember_token 
    EMAIL_VALIDATOR = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
    validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: EMAIL_VALIDATOR } 
  
@@ -13,7 +14,14 @@ class User < ActiveRecord::Base
    validates :password, length: { minimum: 6 }  
    validates :password_confirmation, presence: true
  
- #Gravatar paperclip  
+ #Avatar paperclip  
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "frog.jpg"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+private 
+ def create_remember_token
+  self.remember_token = SecureRandom.urlsafe_base64   
+ end 
 end
+
+
