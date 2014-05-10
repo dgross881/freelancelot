@@ -18,22 +18,22 @@ end
 
  end 
  
- describe "When no names are present"  do
+ describe "With no names  present"  do
    before {@user.name = " " }
    it {should_not be_valid } 
  end
  
- describe "When name is too long"  do
+ describe "With a name too long"  do
    before { @user.name = "a" * 52 } 
    it {should_not be_valid }
  end
- describe "When no emails are present" do 
+ describe "With no emails present" do 
    before {@user.email = " "}
    it {should_not be_valid }  
  end 
 
 
- describe "when emails are invalid" do
+ describe "with invalid emails" do
   it "has invalid email" do
     addresses = %w[user@foo,com user_at_foo.org example.user@foo.
                   foobar@bar_baz.com foo@bar+baz.com ]
@@ -71,6 +71,7 @@ describe "when password_confirmation is not present" do
 
   context "remember tokenin is used in the password" do 
   before { @user.save } 
+  its(:remember_token) {should_not be_blank} 
     it "will not be blank" do 
 
     expect(subject.remember_token).to_not be_nil 
