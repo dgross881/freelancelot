@@ -7,6 +7,11 @@
     <ul>
       <li> <%= link_to "Help", '#'%> </li>
       <li> <%= link_to "Contact", contact_path  %></li>
+      <% if signed_in?  %>
+
+       <% else %>
+
+       <% end  %>
       <li> <a href="http://www.url.com" target="_blank">Daves Blog</a></li>
     </ul> 
   </nav>   

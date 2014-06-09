@@ -3,7 +3,10 @@
   <aside class="span4" >
    <section>
     <h1>
-     <%= @user.name  %>
+      <%= @user.name  %>
+     <h2>  
+      <%= @user.occupation %>
+     </h2>
      <%= image_tag @user.avatar.url(:medium) %>
    </h1>
   </section>

@@ -8,7 +8,6 @@ describe "signup page" do
    it { should have_content("Sign up") }
    it { should have_title(full_title("Sign up")) }
 
-
  describe "signup" do
 
  before { visit signup_path }
@@ -19,6 +18,7 @@ describe "signup page" do
     it "should not create a user" do
     expect { click_button submit }.not_to change(User, :count)
   end
+  
   describe "after submision"  do
     before { click_button submit } 
 
