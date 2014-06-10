@@ -34,6 +34,8 @@ group :development, :test do
   gem "rspec-rails", "~> 2.14.0"
   gem "factory_girl_rails", "~> 4.2.1"
   gem 'sqlite3', '~> 1.3.9'
+  gem 'cucumber', '~> 1.3.15'
+  gem 'cucumber-rails'
 end
 
 group :test do
