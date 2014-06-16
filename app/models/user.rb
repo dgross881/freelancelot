@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
- 
  #name 
   validates :name, presence: true, length: { maximum: 50 }  
  
@@ -15,11 +14,15 @@ class User < ActiveRecord::Base
    validates :password_confirmation, presence: true
  
  #Avatar paperclip  
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "frog.jpg",
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "150x150>" }, :default_url => "frog.jpg",
                     :storage => :dropbox,
                     :dropbox_credentials => Rails.root.join("config/dropbox.yml")
 
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+ 
+def User.new_remember_token
+ SecureRandom.urlsafe_base64 
+end 
 
 private 
  def create_remember_token

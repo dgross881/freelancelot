@@ -1,11 +1,17 @@
-<div class="center hero-unit">
- <h1>Welcome To Student App</h1>
-  <p> 
-    Need a book? We can help
-    <a href="http://www.amazon.com" target="books">Find Your Book</a>
-  </p>
- <%= link_to "Sign up Now!", signup_path, class: "btn btn-lg btn-primary" %>
- </div>
-
- 
- 
+ <!-- Jumbotron -->
+     <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+           <div class="center">
+            <h1>FreeLancelot the answer to your design</h1>
+            <p class="lead">We specialize in delivering high quality selected freelancers to fit your companies needs</p>
+            <p class="lead">Click here to Sign in or Sign up</p>
+            <p class="lead">
+            <%=link_to "Sign up", signup_path, class: "btn btn-default btn-lg" %>
+            </p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div><!-- End Jumbotron -->

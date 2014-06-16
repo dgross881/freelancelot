@@ -2,7 +2,7 @@
 <h1> Sign up </h1> 
 
 <div class = "row">
-  <div class= "span6 offset3">
+  <div class= "col-md-6 col-md-offset-3">
    
   <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
     <%= render 'shared/error_messages' %>
@@ -11,10 +11,10 @@
      <%= f.text_field :name, autofocus: true, class: "form-control" %>
      
      <%= f.label :occupation %> 
-     <%= f.text_field :occupation %>
+     <%= f.text_field :occupation, class: "form-control" %>
 
      <%= f.label :email %>
-     <%= f.email_field :email, class:"form-control" %> 
+     <%= f.email_field :email, class: "form-control" %> 
     
      <%= f.label :password %>
      <%= f.password_field :password,  class: "form-control" %> 
@@ -22,11 +22,11 @@
      <%= f.label :password_confirmation, "Confirmation"  %>
      <%= f.password_field :password_confirmation, class: "form-control" %> 
     
-     <%= f.label :avatar =%>
-     <%= f.file_field :avatar, class: "form-control" %> 
-   <div class= "form-group">
+     <%= f.label :image %>
+     <%= f.file_field :avatar %> 
+
     <%= f.submit "Sign up", class: "btn btn-larg btn-primary" %>
-  </div>
+
   <% end %>
 </div>
 </div>

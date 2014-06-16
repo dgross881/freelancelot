@@ -1,0 +1,25 @@
+<% provide(:title, "All Users") %>
+<h1> All Users </h1>
+
+<div class="flickr_pagination">
+ <%= will_paginate @posts, :class => false   %>
+</div> 
+<div class="center">
+ <div class="row">
+  <% @users.each do |user| %>
+     <div class="col-md-4"><br>
+       <div class="thumbnail">       
+        <%= link_to(image_tag(user.avatar.url(:medium)), user) %>
+          <div class="caption">
+             <h3><%= link_to user.name, user %></h3>
+             <p><%= user.occupation %></p>
+         </div> 
+       </div>
+     </div>  
+   <% end %>
+ </div>
+</div>
+<br>
+<div class="flickr_pagination">
+ <%= will_paginate %>
+</div>
