@@ -1,11 +1,25 @@
 <% provide(:title, @user.name) %>
-
-<div class="row">
-  <div class="col-md-6">
-      <%= image_tag @user.avatar.url(:medium), class: "img-rounded" %>
+<div class="row"> 
+  <div class="col-md-10">
+  <div class="img-thumbnail pull-left">
+      <%= image_tag(@user.avatar.url(:medium)) %>
+        <h2>
+          <%= @user.name %><br>
+        </h2>
+        <span>
+          <%= @user.occupation %> 
+        </span>
+        <span>
+         <%= pluralize(@user.microposts.count, "messages") %>
+        </span> 
+      </div>
+       <% if @user.microposts.any? %> 
+      <div class= "col-md-5 col-md-4-offset"> 
+        <div class="microposts">
+         </h2> You have(<%= @user.microposts.count %>) messages</h2>    
+          <%= render @user.microposts %>
+        <% end %>
+      <%= will_paginate @microposts %> 
+    </div>
   </div>
-  <div class="col-md-4 ">
-    <h3><%= @user.name %></h3>
-    <p><%=  @user.occupation%></p>
- </div>
 </div>

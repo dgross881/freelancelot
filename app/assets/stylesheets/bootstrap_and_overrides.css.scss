@@ -22,7 +22,6 @@ html {
 }
 
 body {
-  background-color: #F5F5F1;
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 60px;
@@ -153,7 +152,11 @@ aside {
 
 .gravatar {
   float: left;
-  margin-right: 10px;
+  margin-right: 15px;
+}
+
+.th-copy{
+  padding: 30px;
 }
 
 .stats {
@@ -225,6 +228,9 @@ input {
     }
   }
 }
+.col-md-3:nth-child(4n+1) {
+  clear: left;
+}
 
 /* microposts */
 
@@ -254,8 +260,10 @@ aside {
   }
 }
 
+
 .flickr_pagination {
   text-align: center;
+  position: relative;
   padding: 0.3em;
   cursor: default; }
 .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
@@ -283,5 +291,8 @@ aside {
     margin-right: 1em; }
 .flickr_pagination .next_page {
     margin-left: 1em; }
+
+
+
 
 

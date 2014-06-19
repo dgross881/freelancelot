@@ -1,0 +1,10 @@
+<%= form_for(@micropost) do |f| %>
+  <%= render 'shared/error_messages', object: @micropost %>
+<div class="field"> 
+  <%= f.text_area :content, placeholder: "Enter your message here...", class: "form-control" %>
+</div>
+  <%= f.button "Post", class: "btn btn-primary pull-right" %>
+<% end  %>
+
+
+ 

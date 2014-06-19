@@ -1,4 +1,24 @@
- <!-- Jumbotron -->
+<% if signed_in? %>
+  <div class="row"> 
+    <div class="col-md-6 th-copy">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section> 
+      <section>
+      <div class="col-md-8 th-copy"> 
+       <h3>Micropost Feed</h3> 
+       <%= render 'shared/feed' %>
+      </div>s
+    </div>
+    </section> 
+    <div class="col-md-4 th-copy"> 
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+     </div>
+    </div>
+  </div> 
+   <% else %> 
      <div class="jumbotron">
       <div class="container">
         <div class="row">
@@ -9,9 +29,12 @@
             <p class="lead">Click here to Sign in or Sign up</p>
             <p class="lead">
             <%=link_to "Sign up", signup_path, class: "btn btn-default btn-lg" %>
+            <%=link_to "Sign in", signin_path, class: "btn btn-default btn-lg" %>
+            </p>
             </p>
           </div>
          </div>
         </div>
       </div>
     </div><!-- End Jumbotron -->
+    <% end  %>
