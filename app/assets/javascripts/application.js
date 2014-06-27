@@ -15,10 +15,9 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
-//= require backgroundvideo.min
-//= require script 
+//= require script
 //= require jquery.scrollTo
-//= reqiure modernizr.custom
-//= require jquery.svganim
-//= require page-transitions
-//= require startup-kit.js 
+//= require startup-kit
+//= require modernizr.custom 
+//= require jquery.svganim 
+//= require easing.min 

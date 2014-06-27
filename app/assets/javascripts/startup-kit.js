@@ -591,6 +591,10 @@ startupKit.uiKitContent.content7 = function() {
         }
 
     })($('.screen'));
+
+    
+    
+
 };
 
 /* Content 8*/

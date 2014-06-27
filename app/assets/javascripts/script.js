@@ -113,11 +113,3 @@ function fadedEls(el, shift) {
     });
 })(jQuery);
 
-  $(function() {
-        var BV = new $.BigVideo();
-  BV.init();
-  BV.show("<%= request.protocol + request.host_with_port + asset_path('main-video.mp4') %>",{ambient:true});
-  });
-
-
-
