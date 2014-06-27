@@ -20,7 +20,6 @@ gem 'bcrypt-ruby', '~> 3.1.5'
 gem 'paperclip-dropbox', '~> 1.2.1'
 gem 'figaro', '~> 0.7.0'
 gem 'simple_form', '~> 3.0.2'
-gem 'designmodo-startup_framework-rails', '~> 1.1.3.10'
 gem "font-awesome-rails", '~> 4.1.0.0'
 gem 'jquery-scrollto-rails', '~> 1.4.3'
 

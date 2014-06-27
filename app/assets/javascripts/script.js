@@ -33,7 +33,7 @@ function fadedEls(el, shift) {
     $(function() {
         var videobackground = new $.backgroundVideo($('#bgVideo'), {
             "align" : "centerXY",
-            "path" : <%= request.protocol + request.host_with_port + asset_path('preview.mp4') %>,
+            "path" : ,
             "width": 1280,
             "height": 720,
             "filename" : "preview",
@@ -118,6 +118,6 @@ function fadedEls(el, shift) {
   $(function() {
         var BV = new $.BigVideo();
   BV.init();
-  BV.show("<%= request.protocol + request.host_with_port + asset_path('preview.mp4') %>",{ambient:true});
+  BV.show("",{ambient:true});
   });
 </script>
