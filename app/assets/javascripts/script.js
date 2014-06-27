@@ -1,4 +1,3 @@
-
 function fadedEls(el, shift) {
     el.css('opacity', 0);
 
@@ -33,7 +32,7 @@ function fadedEls(el, shift) {
     $(function() {
         var videobackground = new $.backgroundVideo($('#bgVideo'), {
             "align" : "centerXY",
-            "path" : ,
+            "path" : "video/",
             "width": 1280,
             "height": 720,
             "filename" : "preview",
@@ -114,4 +113,12 @@ function fadedEls(el, shift) {
     });
 })(jQuery);
 
- 
+<script>
+  $(function() {
+        var BV = new $.BigVideo();
+  BV.init();
+  BV.show("<%= request.protocol + request.host_with_port + asset_path('main-video.mp4') %>",{ambient:true});
+  });
+</script>
+
+

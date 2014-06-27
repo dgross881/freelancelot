@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
-//= require backgroundvideo
+//= require backgroundvideo.min
 //= require script 
 //= require jquery.scrollTo
 //= reqiure modernizr.custom
