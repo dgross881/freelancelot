@@ -22,6 +22,7 @@ gem 'figaro', '~> 0.7.0'
 gem 'simple_form', '~> 3.0.2'
 gem "font-awesome-rails", '~> 4.1.0.0'
 gem 'jquery-scrollto-rails', '~> 1.4.3'
+gem 'ffaker', '~> 1.24.0'  
 
 group :doc do
   gem 'sdoc', require: false
@@ -35,12 +36,9 @@ end
 
 group :development, :test do
   gem 'spring', '~> 1.1.2'
-  gem 'ffaker', '~> 1.24.0'
   gem "rspec-rails", "~> 2.14.0"
   gem "factory_girl_rails", "~> 4.2.1"
   gem 'sqlite3', '~> 1.3.9'
-
-
 end
 
 group :test do
