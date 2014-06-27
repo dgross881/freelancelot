@@ -114,10 +114,4 @@ function fadedEls(el, shift) {
     });
 })(jQuery);
 
-<script>
-  $(function() {
-        var BV = new $.BigVideo();
-  BV.init();
-  BV.show("",{ambient:true});
-  });
-</script>
+ 
