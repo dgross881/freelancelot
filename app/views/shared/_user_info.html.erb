@@ -1,7 +1,8 @@
- <div class="img-thumbnail">
-<%= image_tag(current_user.avatar.url(:medium)) %>  
-   <p><%= current_user.name %></p>
-   <span ><%= link_to "view my profile", current_user %></span> 
-   <span><%= pluralize(current_user.microposts.count, "messages") %></span> 
+<div class="img-thumbnail">
+  <div class="center"> 
+  <%= link_to(image_tag(current_user.avatar.url(:medium)), current_user) %>  
+  <p><%= current_user.name %></p>
+</div>
+   <span><%= render 'shared/stats' %></span>
  </div>
 </div>

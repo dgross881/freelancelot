@@ -1,25 +1,54 @@
 <% provide(:title, @user.name) %>
-<div class="row"> 
-  <div class="col-md-10">
-  <div class="img-thumbnail pull-left">
-      <%= image_tag(@user.avatar.url(:medium)) %>
-        <h2>
-          <%= @user.name %><br>
-        </h2>
-        <span>
-          <%= @user.occupation %> 
-        </span>
-        <span>
-         <%= pluralize(@user.microposts.count, "messages") %>
-        </span> 
-      </div>
-       <% if @user.microposts.any? %> 
-      <div class= "col-md-5 col-md-4-offset"> 
-        <div class="microposts">
-         </h2> You have(<%= @user.microposts.count %>) messages</h2>    
-          <%= render @user.microposts %>
-        <% end %>
-      <%= will_paginate @microposts %> 
-    </div>
-  </div>
-</div>
+
+<div class="container">
+   <div class="row">
+       <div class="col-xl-10">
+                  <div class="col-xl-12 col-sm-4 text-center">
+                                  <%= image_tag(@user.avatar.url(:medium), class: "center-block img-rounded img-responsive") %>
+                                  <ul class="list-inline ratings text-center" title="Ratings">
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                  <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                </ul>                                  
+                            </div><!--/col-->
+                       </div>
+                        <div class="col-xl-12 col-md-8">
+                            <h2><%= @user.name %> is Available</h2>
+                            <hr style="margin:6px auto">    
+                            <p><strong>About: </strong><%= @user.occupation %></p>
+                            <hr style="margin:6px auto">    
+                            <p><strong>Hobbies: </strong> Read, out with friends, listen to music, draw and learn new things. I like to 
+                            play ice hockey and eat crabs too</p>
+                            <hr style="margin:6px auto">    
+                            <p><strong>Skills: </strong>
+                                <span class="label label-info tags">html5</span> 
+                                <span class="label label-info tags">css3</span>
+                                <span class="label label-info tags">jquery</span>
+                                <span class="label label-info tags">bootstrap3</span>
+                            </p>
+                            <hr style="margin:6px auto">    
+                        </div><!--/col-->    
+                      </div>                  
+                    <div class= "row">
+                      <div class= 'col-xl-10'>
+                        <div class="col-md-3">
+                            <h2><strong> 20,7K </strong></h2>                    
+                            <p><small>Followers</small></p>
+                            <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+                        </div><!--/col-->
+                        <div class="col-md-3">
+                            <h2><strong>245</strong></h2>                    
+                            <p><small>Following</small></p>
+                            <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
+                        </div><!--/col-->
+                        <div class="col-md-3">
+                            <h2><strong>43</strong></h2>                    
+                            <p><small>Snippets</small></p>
+                            <button type="button" class="btn btn-primary btn-block"><span class="fa fa-gear"></span> Options </button>  
+                       </div><!--/col-->
+                    </div><!--/row-->
+                </div> 
+             <hr style="margin:6px auto">   
+        </div>

@@ -39,13 +39,27 @@ module SessionsHelper
   end
 
    def redirect_back_or(default)
-    redirect_to(session[:return_to] || default) 
-    session.delete(:return_to)
-   end 
-   
+     redirect_to(session[:return_to])
+     session.delete(:return_to)
+   end
+
    def initial
   
    end 
+   
+   def follow!(other_user)
+    self.relationships.create!(followed_id: other_user.id)
+   end
+
+   def follow?(other_user)
+    self.relationships.find_by_followed_id(other_users)
+   end 
+
+   def unfollow!(other_user)
+     self.relationships.find_by(followed_id: other_user.id).destroy
+   end
+                           
   end
+ 
 
  

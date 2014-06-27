@@ -46,6 +46,20 @@ class UsersController < ApplicationController
     flash[:success] = "User destroyed."
     redirect_to users_url
   end
+  
+  def following
+   @title = "Following" 
+   @user = User.find(params[:id])
+   @users = @user.followed_users.paginate(page: params[:page])
+   render 'show_follow'
+  end 
+
+ def followers
+   @title = "Followers"
+   @user = User.find(params[:id])
+   @users = @user.followers.paginate(page: params[:page])
+   render 'show_follow'
+ end
 
   private
 
@@ -62,3 +76,4 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
   end
+

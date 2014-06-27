@@ -1,53 +1,51 @@
 require 'spec_helper'
 
-describe "StaticPages" do
-  subject { page } 
+feature "StaticPages" do
   
-  describe "Home Page"  do
-    before {visit root_path } 
+  scenario "visit Home Page"  do
+    visit root_path  
      
-   it {should have_title('Welcome To Student App') }
-   it {should_not have_title('| Home') }
+   expect(page).to have_title('Welcome To Student App') 
+   expect(page).not_to have_title('| Home') 
+  end 
 
-  describe "for signed-in users" do
-  let(:user) {FactoryGirl.create(:user) } 
-   before do 
-    FactoryGirl.create(:micropost, user: user) 
-    FactoryGirl.create(:micropost, user: user) 
-    sign_in user
-    visit root_path 
-   end
-   
-   it "should render the user's feed" do 
-     user.feed.each do |item|
-       expect(page).to have_selector("li##{item.id}", text: item.content) 
-    end 
-   end 
-  end
- end 
+  scenario "visit Help page" do
+   visit help_path 
 
-  describe "Help page" do
-   before { visit help_path }
-
-   it {should have_selector('h1', text: 'Need Help Selecting the Right Book ?')}  
-   it {should have_title(full_title("Help"))}
-  
+   expect(page).to have_content('Need Help Selecting the Right Book ?')  
+   expect(page).to have_title(full_title("Help"))
   end 
    
-  describe "About Page"  do
-   before {visit about_path } 
+  scenario "visit About Page"  do
+   visit about_path  
     
-   it {should have_selector('h1', text: 'We Help Students Find The Books They Need')}
-   it {should have_title('About') } 
+   expect(page).to have_content('We Help Students Find The Books They Need')
+   expect(page).to have_title('About')
  end
- 
- describe "Contact page" do 
-   before {visit contact_path } 
 
-   it { should have_selector('h1', text: "Contact") } 
-   it { should have_title("Contact") } 
+  feature "following/followers count" do 
+   let(:user) {FactoryGirl.create(:user) } 
+   let(:other_user) { FactoryGirl.create(:user) } 
+   before do 
+     sign_in(user)
+     other_user.follow!(user)
    end 
-   it "has the right links on layout" do 
+   
+  scenario "following/follower links work" do
+   visit root_path
+   expect(page).to have_link("0 following", href: following_user_path(user))
+   expect(page).to have_link("1 followers", href: followers_user_path(user))
+  end 
+ end
+
+ scenario "visit Contact page" do 
+   visit contact_path  
+
+   expect(page).to have_content("Contact")  
+   expect(page).to have_title("Contact")  
+   end 
+   
+   scenario "All the links correctly linked" do 
      visit root_path 
      first(:link, "Sign in").click  
      page.has_title? "Sign in"
@@ -58,4 +56,4 @@ describe "StaticPages" do
      click_link "Sign up"
      page.has_title? "Sign up" 
    end 
- end 
+end   

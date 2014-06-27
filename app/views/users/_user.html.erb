@@ -1,10 +1,17 @@
 
-   <div class="col-md-3">
-       <div class="thumbnail"> 
-       <%= link_to(image_tag(user.avatar.url(:medium)), user) %>
-          <div class="caption">
-             <h3><%= link_to user.name, user%></h3>
-             <p><%= user.occupation %></p>
-          </div> 
-        </div>
+   <div class="col-lg-4">
+      <div class='thumbnail'>
+       <div class="media"> 
+          <div class="pull-left">
+            <%= link_to(image_tag(user.avatar.url(:thumb), class: "media-object dp img-circle"), user) %>
+           </div>  
+            <div class="media-body">
+                <h4 class="media-heading"><%= link_to user.name, user%></h4>
+                <p><%= user.occupation %></p>
+                   <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message</a>
+                   <a href="#" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-star"></span> Vouche</a>    
+                <hr style="margin:6px auto">                
+            </div>
+         </div>
       </div>
+   </div>

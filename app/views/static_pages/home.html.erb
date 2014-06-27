@@ -1,40 +1,142 @@
-<% if signed_in? %>
-  <div class="row"> 
-    <div class="col-md-6 th-copy">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section> 
-      <section>
-      <div class="col-md-8 th-copy"> 
-       <h3>Micropost Feed</h3> 
-       <%= render 'shared/feed' %>
-      </div>s
-    </div>
-    </section> 
-    <div class="col-md-4 th-copy"> 
-      <section>
-        <%= render 'shared/micropost_form' %>
-      </section>
-     </div>
-    </div>
-  </div> 
-   <% else %> 
-     <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
-           <div class="center">
-            <h1>FreeLancelot the answer to your design</h1>
-            <p class="lead">We specialize in delivering high quality selected freelancers to fit your companies needs</p>
-            <p class="lead">Click here to Sign in or Sign up</p>
-            <p class="lead">
-            <%=link_to "Sign up", signup_path, class: "btn btn-default btn-lg" %>
-            <%=link_to "Sign in", signin_path, class: "btn btn-default btn-lg" %>
-            </p>
-            </p>
-          </div>
-         </div>
-        </div>
-      </div>
-    </div><!-- End Jumbotron -->
-    <% end  %>
+<!DOCTYPE html>
+    <body>
+        <div class="page-wrapper">
+            <section class="header-10-sub v-center bg-midnight-blue">
+                <div class="background">
+                    &nbsp;
+                </div>
+                <div>
+                    <div class="container">
+                        <div class="hero-unit">
+                            <h1>Freelancelot creative thinking community!</h1>
+                              <p>
+                                We already found them all so you don't have to  
+                                <br/>
+                                Were pretty good at it, try us out
+                            </p>
+                        </div>
+                        <p class="lead">Click here to Sign in or Sign up</p>
+                        <p class="lead">
+                           <%=link_to "Sign up", signup_path, class: "btn btn-default btn-lg btn-clear" %>
+                           <%=link_to "Sign in", signin_path, class: "btn btn-default btn-lg btn-clear" %>
+                        </p>
+                      </p>
+                    </div>
+                </div>
+                <a class="control-btn " href="#"><span class="glyphicon glyphicon-arrow-down"></span></a>
+            </section>
+
+            <!-- content-7  -->
+            <section class="content-7 v-center">
+                <div>
+
+                    <div class="container">
+                        <h3>Take a look at our awesome product</h3>
+
+                        <div class="row v-center">
+                            <div class="col-sm-3">
+                                <div>
+                                    Of course we haven’t forgotten about the responsive layout. Create a website with full mobile
+                                    support.
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="col-sm-offset-1">
+                                    <div class="screen-wrapper">
+                                        <div class="screen">
+                                            <%= image_tag("screen-popup.png", :alt => "screen popup") %>
+                                            <%= image_tag("screen.png", :alt => "screen") %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-offset-2">
+                                    <h6>Responsive Layout</h6>
+                                    Of course we haven’t forgotten about the responsive layout. Full mobile support.
+                                    <h6>Retina Ready</h6>
+                                    Startup Framework works fine on devices supporting Retina Display. Feel the clarity!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- content-23  -->
+            <section class="content-23 v-center bg-midnight-blue custom-bg">
+                <div>
+                    <div class="container">
+                        <div class="hero-unit hero-unit-bordered">
+                            <h1>Thinking Creative</h1>
+                        </div>
+                    </div>
+                </div>
+                <a class="control-btn fui-arrow-down" href="#"><span class="glyphicon glyphicon-arrow-down"></span> </a>
+            </section>
+
+            <!-- content-8  -->
+            <section class="content-8 v-center">
+                <div>
+                    <div class="container">
+                        <%= image_tag("art.jpg", width: '397', height: '193', class: "img-rounded") %>
+
+                        <h3>We'll do all the dirty work so you dont have too!</h3>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <p>We have a great surprise for Designmodo fans – our first free HTML user interface kit.
+                                    Flat UI Free is made on the basis of Twitter Bootstrap in a stunning flat-style.
+                                </p>
+                                <a class="btn btn-large btn-clear" href="#">TRY IT NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- content-23  -->
+            <section class="content-23  v-center bg-midnight-blue">
+                <div id="bgVideo" class="background"></div>
+                <div>
+                    <div class="container">
+                        <div class="hero-unit">
+                            <h1>Find a perfect suit for
+                            <br class="hidden-phone">
+                            your startup</h1>
+                        </div>
+                    </div>
+                </div>
+                <a class="control-btn fui-arrow-down" href="#"><span class="glyphicon glyphicon-arrow-down"></span> </a>
+            </section>
+
+            <!-- content-8  -->
+            <section class="content-8 v-center">
+                <div>
+                    <div class="container">
+                       <%= image_tag("ticket-red@2x.png", width: "380", height: "187") %>
+                        <h3>Twenty Five Awesome Samples</h3>
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <p>
+                                    The most important part of the Startup Framework is the samples.
+                                    The samples form a set of 25 usable pages or you can add new blocks from UI Kit.
+                                </p>
+                                <a class="btn btn-large btn-clear" href="#">TRY IT NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- content-11  -->
+            <section class="content-11">
+                <div class="container">
+                    <span>You have the design, you have the code</span>
+                    <a class="btn btn-large btn-danger" href="#">TRY IT NOW</a>
+                </div>
+            </section>
+
+      
+    </body>
+</html>
