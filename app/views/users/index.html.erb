@@ -1,11 +1,10 @@
 <% provide(:title, "All Users") %>
- 
+
  <div class="container">
-   <h1> All Users </h1>
     <div class="row">   
-     <%= render @users %>  
+     <%= render @users %> 
+     <div class="flickr_pagination">
+     <%= will_paginate @users %>
+   </div> 
     </div>
-    <div class="flickr_pagination">
-     <%= will_paginate  %>
-   </div>
  </div>

@@ -7,7 +7,6 @@ gem 'jquery-rails', '~> 3.1.0'
 gem 'thor', '~> 0.19.1'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.1'
-gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'less', '~> 2.5.0'
 gem 'less-rails', '~> 2.5.0'
 gem 'therubyracer', '~> 0.12.1'
@@ -23,6 +22,7 @@ gem 'simple_form', '~> 3.0.2'
 gem "font-awesome-rails", '~> 4.1.0.0'
 gem 'jquery-scrollto-rails', '~> 1.4.3'
 gem 'ffaker', '~> 1.24.0'  
+gem 'will_paginate-bootstrap', '~> 1.0.1'
 
 group :doc do
   gem 'sdoc', require: false

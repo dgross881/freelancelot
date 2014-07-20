@@ -1,0 +1,168 @@
+/**
+ * Crew 2 stylesheet  
+ * */
+.crew-2 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.crew-2 h3 {
+  margin: 0 0 73px;
+  font-size: 30px;
+  text-align: left;
+  font-weight: 300;
+}
+.crew-2 .members {
+  display: table;
+  width: 100%;
+}
+.crew-2 .members .member-wrapper {
+  display: table-cell;
+}
+.crew-2 .members .member-wrapper:first-child + .member-wrapper {
+  text-align: center;
+}
+.crew-2 .members .member-wrapper:first-child + .member-wrapper + .member-wrapper {
+  text-align: right;
+}
+.crew-2 .members .member {
+  width: 265px;
+  display: inline-block;
+  padding-bottom: 23px;
+  -webkit-transition: border-color 0.4s;
+  -moz-transition: border-color 0.4s;
+  -o-transition: border-color 0.4s;
+  transition: border-color 0.4s;
+}
+.crew-2 .members + .members .member {
+  padding-top: 78px;
+  border-top: 2px solid #ebedee;
+}
+.crew-2 .members .photo-wrapper {
+  width: 265px;
+  height: 220px;
+  position: relative;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ecf0f1;
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+.crew-2 .members .photo {
+  position: absolute;
+  width: 270px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: 50% 50% no-repeat;
+  opacity: 80;
+  filter: alpha(opacity=3000);
+  opacity: 0.6;
+  filter: alpha(opacity=90);
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.crew-2 .members .photo img {
+  display: visible;
+}
+.crew-2 .members .info {
+  text-align: center;
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 29px;
+}
+.crew-2 .members .name {
+  position: relative;
+  left: 10px;
+  top: 5px;
+  border-bottom: 0.5px dashed #95a5a6;
+  color: #2A6496;
+  font-size: 13px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+.crew-2 .members .position {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  color: #fff;
+  font-size: 13px;
+  font-style: italic;
+}
+.crew-2 .members  .member:hover .position {
+     font-weight: 600;
+}
+.crew-2 .members .social-btns {
+  white-space: nowrap;
+  margin-top: 24px;
+  border-bottom: 1px solid #95a5a6;
+  padding-bottom: 10px;
+}
+.crew-2 .members .social-btns > * {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #2A6496;
+}
+.crew-2 .members .social-btns > *:first-child {
+  margin-left: 0;
+}
+.crew-2 .members .social-btns > * > * {
+  display: block;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.25s top;
+  -moz-transition: 0.25s top;
+  -o-transition: 0.25s top;
+  transition: 0.25s top;
+}
+.crew-2 .members .social-btns > * > *:first-child {
+  color: #95a5a6;
+}
+.crew-2 .members .social-btns > *:hover > * {
+  top: -100%;
+}
+
+.crew-2 .members .member:hover .photo {
+  opacity: 80;
+  filter: alpha(opacity=4000);
+  opacity: 0.8;
+  filter: alpha(opacity=40);
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .crew-2 .members .member,
+  .crew-2 .members .photo-wrapper {
+    width: 230px;
+  }
+}
+@media (max-width: 767px) {
+  .crew-2 .members {
+    display: block;
+    width: auto;
+  }
+  .crew-2 .members .member-wrapper {
+    display: block;
+    text-align: center!important;
+  }
+  .crew-2 .members .member-wrapper + .member-wrapper .member {
+    padding-top: 78px;
+    border-top: 2px solid #ebedee;
+  }
+}

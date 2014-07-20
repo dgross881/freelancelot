@@ -1,5 +1,8 @@
 @import "bootstrap";
 @import "font-awesome";
+@import "icon-font";
+@import "animations";
+@import "style";
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
@@ -13,6 +16,10 @@
     -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
         box-sizing: border-box;
+}
+
+.row:before, .row:after {
+      padding: 5px;
 }
 
 /* universal */
@@ -1024,7 +1031,7 @@ section * {
   margin: 0 0 30px;
   font-size: 45px;
   font-weight: normal;
-  color: #ffffff;
+  color: #f6f6f6;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 350;
 }
@@ -1055,7 +1062,7 @@ section * {
 .header-10-sub .hero-unit.hero-unit-bordered h1 {
   font-size: 46px;
   font-weight: normal;
-  color: #ffffff;
+  color: #f6f6f6;
   font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 8px solid white;
@@ -1067,7 +1074,7 @@ section * {
   .header-10-sub .hero-unit.hero-unit-bordered h1 {
     font-size: 22px;
     font-weight: normal;
-    color: #ffffff;
+    color: #63544E;
     font-weight: 500;
   }
 }
@@ -1461,7 +1468,7 @@ section * {
   text-align: center;
   font-size: 19px;
   font-weight: normal;
-  color: #7f8c8d;
+  color: #63544E;
   background: #121518;
   color: #ffffff;
   opacity: 30;
@@ -1510,17 +1517,18 @@ section * {
   .content-23 .hero-unit h1 {
     font-size: 36px;
     font-weight: normal;
-    color: #ffffff;
+    color: #f6f6f6;
     font-weight: 600;
     line-height: 33px;
   }
 }
 .content-23 .hero-unit.hero-unit-bordered h1 {
   font-size: 46px;
+  font-family: cursive;
   font-weight: normal;
-  color: #ffffff;
+  color: #D5D5D5;
   font-weight: 500;
-  border: 8px solid white;
+  border: 8px dashed #D5D5D5;
   display: inline-block;
   margin: 0;
   padding: 30px 40px;
@@ -1654,7 +1662,7 @@ section * {
   }
 }
 .header-10-sub .background {
-  background-image: url('newyork.jpg');
+  background-image: url('newyork_new.jpg');
   opacity: 85;
   filter: alpha(opacity=8500);
   opacity: 0.85;
@@ -1698,7 +1706,7 @@ section * {
   filter: alpha(opacity=10);
 }
 .content-23.custom-bg {
-  background-image: url('background.png');
+  background-image: url('movie_image.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1711,7 +1719,7 @@ section * {
 .flickr_pagination {
   text-align: center;
   position: relative;
-  padding: 0.3em;
+  padding-bottom: 20px;
   cursor: default; }
 .flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
     padding: 0.2em 0.5em; }
@@ -1720,14 +1728,15 @@ section * {
 .flickr_pagination .current {
     font-style: normal;
     font-weight: bold;
-    color: #ff0084; }
+    color: #2A6496; }
 .flickr_pagination a {
     border: 1px solid #dddddd;
-    color: #0063dc;
+    border-radius: 5px;
+    color: #7F8C8D;
     text-decoration: none; }
 .flickr_pagination a:hover, .flickr_pagination a:focus {
       border-color: #003366;
-      background: #0063dc;
+      background:  #2A6496;
       color: white; }
 .flickr_pagination .page_info {
     color: #aaaaaa;
@@ -1738,4 +1747,5 @@ section * {
     margin-right: 1em; }
 .flickr_pagination .next_page {
     margin-left: 1em; }
+
 

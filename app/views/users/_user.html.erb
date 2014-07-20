@@ -1,17 +1,32 @@
-
-   <div class="col-lg-4">
-      <div class='thumbnail'>
-       <div class="media"> 
-          <div class="pull-left">
-            <%= link_to(image_tag(user.avatar.url(:thumb), class: "media-object dp img-circle"), user) %>
-           </div>  
-            <div class="media-body">
-                <h4 class="media-heading"><%= link_to user.name, user%></h4>
-                <p><%= user.occupation %></p>
-                   <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-envelope"></span> Message</a>
-                   <a href="#" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-star"></span> Vouche</a>    
-                <hr style="margin:6px auto">                
-            </div>
-         </div>
-      </div>
-   </div>
+<div class="page-wrapper">
+ <div class="col-lg-4">
+  <section class="crew-2">
+      <div class="members">
+          <div class="member-wrapper">
+             <div class="member">
+               <div class="photo-wrapper">
+                  <div class="photo"><%= link_to(image_tag(user.avatar.url(:medium), class: "img-rounded"), user) %></div> 
+                  <div class="position"><%= user.occupation %></div>
+                </div>       
+                    <div class="info">
+                       <div class="name"><%= user.name %></div>   
+                       <P>Easy to change and easy to create new elements with color swatches.</P>
+                      <div class="social-btns">
+                         <a href="#">
+                           <div class="fui-mail"></div>
+                           <div class="fui-mail"></div>
+                         </a>
+                         <a href="#">
+                            <div class="fui-facebook"></div>
+                            <div class="fui-facebook"></div>
+                          </a>
+                          <a href="#">
+                             <div class="fui-linkedin"></div>
+                             <div class="fui-linkedin"></div>
+                          </a>
+                      </div>
+                   </div>
+               </div>
+       </section>
+        </div>
+  </div>
