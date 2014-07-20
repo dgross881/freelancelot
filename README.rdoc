@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 This is a simple application to help find talented freelancers in China 
+=======
+This is a simple application to find talented freelancers in China.
+>>>>>>> profile_page
