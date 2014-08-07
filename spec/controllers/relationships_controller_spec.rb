@@ -1,4 +1,4 @@
-require 'spec_helper'
+sequire 'spec_helper'
 
 describe RelationshipsController do
    let(:user) { FactoryGirl.create(:user) }
