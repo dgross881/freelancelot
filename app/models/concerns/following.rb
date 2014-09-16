@@ -1,7 +1,8 @@
-class User < ActiveRecord::Base 
- #name 
-  validates :name, presence: true, length: { maximum: 50 }  
+module Concerns 
+ module Following
+    extend ActiveSupport::Concern¬
 
+inlcuded do
  #validate microposts and relationships 
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
@@ -30,31 +31,5 @@ class User < ActiveRecord::Base
                     :dropbox_credentials => Rails.root.join("config/dropbox.yml")
 
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
- 
-def User.new_remember_token
- SecureRandom.urlsafe_base64 
-end 
-
-def feed 
- Micropost.where("user_id = ?", id) 
-end 
-
- def following?(other_user)
-  self.relationships.find_by_followed_id(other_user.id)  
+  end 
  end 
-
- def follow!(other_user)
-   self.relationships.create!(followed_id: other_user.id ) 
- end 
-
- def unfollow!(other_user) 
-  self.relationships.find_by(followed_id: other_user.id).destroy
- end 
- 
- def create_remember_token
-  self.remember_token = SecureRandom.urlsafe_base64   
- end 
-end
-
-
-
