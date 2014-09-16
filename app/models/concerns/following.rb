@@ -1,7 +1,7 @@
 module Concerns 
  module Following 
 
-inlcuded do
+included do
  #validate microposts and relationships 
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
