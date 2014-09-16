@@ -1,5 +1,6 @@
 module Concerns 
  module Following 
+  extend ActiveSupport::Concern
 
 included do
  #validate microposts and relationships 
